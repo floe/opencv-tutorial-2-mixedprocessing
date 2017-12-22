@@ -21,3 +21,7 @@ android {
         }
     }
 }
+
+dependencies {
+    compile 'com.github.floe:opencv-android:3.3.1'
+}
