@@ -11,7 +11,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # Gradle automatically packages shared libraries with your APK.
 
 add_library( # Sets the name of the library.
-             mixed-sample
+             mixed_sample
 
              # Sets the library as a shared library.
              SHARED
@@ -40,7 +40,7 @@ include_directories(${OpenCV_INCLUDE_DIRS}) # Not needed for CMake >= 2.8.11
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries( # Specifies the target library.
-                       mixed-sample
+                       mixed_sample
 
                        # Links the target library to the log library
                        # included in the NDK.

@@ -12,6 +12,17 @@ android {
         ndk {
             moduleName "mixed_sample"
         }
+
+        externalNativeBuild {
+            cmake {
+                // Passes optional arguments to CMake.
+                // FIXME: to build native code, you will need to download and unpack the full OpenCV Android SDK
+                // FIXME: with the same version from https://opencv.org/releases.html under 3.3.1 -> Android Pack
+                arguments "-DOpenCV_DIR=/path/to/opencv-android-sdk-3.3.1/sdk/native/jni/"
+                // Sets optional flags for the C compiler.
+                cFlags "-fexceptions", "-frtti"
+            }
+        }
     }
 
     buildTypes {
